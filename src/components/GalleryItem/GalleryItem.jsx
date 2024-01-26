@@ -1,4 +1,4 @@
-import { useState } from React;
+import { useState } from "react";
 import axios from "axios";
 
 function GalleryItem( {getPics, pic, key} ) {
@@ -8,7 +8,6 @@ function GalleryItem( {getPics, pic, key} ) {
     const toggleDisplay = () => setIsClicked(!isClicked)
 
     const updateLikes = (picId) => {
-        const picId = pic.id
         axios.put(`/api/gallery/like/${picId}`)
         .then(() => {
             getPics();
@@ -27,7 +26,7 @@ function GalleryItem( {getPics, pic, key} ) {
         :
         <li onClick={toggleDisplay}> {pic.description} </li>
         }
-         <button onClick={updateLikes}>Love it!</button>
+         <button onClick={() => updateLikes(pic.id)}>Love it!</button>
         </>
     );
 }

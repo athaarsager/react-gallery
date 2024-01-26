@@ -1,5 +1,6 @@
 import axios from "axios";
-import { useState } from React;
+import React from "react";
+import { useState, useEffect } from "react";
 import GalleryItem from "../GalleryItem/GalleryItem";
 
 function GalleryList() {
@@ -16,6 +17,10 @@ function GalleryList() {
                 console.error("Error in client GET:", error);
             });
     }
+
+    useEffect(() => {
+        getPics();
+    }, []);
 
     return (
         <>
