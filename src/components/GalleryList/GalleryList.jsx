@@ -25,10 +25,11 @@ function GalleryList() {
     return (
         <>
             <ul>
-                {picList.map((pic) => (
+                {picList.map((pic, index) => (
                     <GalleryItem
                         getPics={getPics}
                         pic={pic}
+                        key={index}
                     />
                 ))}
             </ul>
