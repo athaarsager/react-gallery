@@ -19,10 +19,15 @@ function GalleryItem( {getPics, pic, key} ) {
     }
 
     return (
-
+        <>
+        { isClicked ?
         <>
         <li onClick={toggleDisplay}>{pic}</li>
-        <button onClick={updateLikes}>Love it!</button>
+        </>
+        :
+        <li onClick={toggleDisplay}> {pic.description} </li>
+        }
+         <button onClick={updateLikes}>Love it!</button>
         </>
     );
 }
