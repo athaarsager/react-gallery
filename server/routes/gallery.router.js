@@ -23,8 +23,8 @@ router.get('/', (req, res) => {
   // code here
   const queryText = `SELECT * FROM "gallery;"`;
   pool.query(queryText)
-  .then((response) => {
-    res.send(response.rows);
+  .then((result) => {
+    res.send(result.rows);
   })
   .catch((error) => {
     console.error("Error in server GET:", error);
