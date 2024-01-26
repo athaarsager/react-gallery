@@ -19,12 +19,13 @@ function GalleryItem({ getPics, pic, key }) {
 
     return (
         <>
+            <h3 data-testid="description">{pic.title}</h3>
             {!isClicked ?
-                <li key={key} onClick={toggleDisplay}><img src={pic.url} /></li>
+                <li key={key} data-testid="galleryItem"><img data-testid="toggle" src={pic.url} onClick={toggleDisplay}/></li>
                 :
-                <li onClick={toggleDisplay}> {pic.description} </li>
+                <li key={key} data-testid="galleryItem"><p data-testid="toggle" onClick={toggleDisplay}> {pic.description}</p></li>
             }
-            <button onClick={() => updateLikes(pic.id)}>Love it!</button>
+            <button data-testid="like" onClick={() => updateLikes(pic.id)}>Love it!</button>
             {pic.likes === 1 ?
                 <p>{pic.likes} person loves this!</p>
                 :

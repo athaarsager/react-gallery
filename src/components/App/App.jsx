@@ -8,7 +8,9 @@ function App() {
         </header>
 
         <p>The gallery goes here!</p>
-        <GalleryList/>
+        <GalleryList
+        data-testid="galleryList"
+        />
         {/* <img src="images/goat_small.jpg"/>
         <img src="images/fira_caldera.jpeg"/>
         <img src="images/great_library_in_ephesus.jpeg"/>
