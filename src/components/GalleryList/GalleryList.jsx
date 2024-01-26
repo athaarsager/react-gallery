@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useState } from React;
+import GalleryItem from "../GalleryItem/GalleryItem";
 
 function GalleryList() {
 
@@ -20,7 +21,10 @@ function GalleryList() {
     return(
         <>
         <ul>
-
+            {picList.map(pic => (
+                <GalleryItem
+                getPics= { getPics }/>
+            ))}
         </ul>
         </>
     );
