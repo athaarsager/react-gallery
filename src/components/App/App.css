@@ -4,6 +4,10 @@ header {
 }
 
 img {
-    width: 280px;
+    width: 300px;
     height: auto;
+}
+
+h3 {
+    text-align: center;
 }

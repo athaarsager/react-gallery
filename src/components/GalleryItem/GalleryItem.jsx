@@ -19,7 +19,7 @@ function GalleryItem({ getPics, pic, key }) {
     }
 
     return (
-        <Col xs={4} className="d-flex justify-content-center" data-testid="galleryItem">
+        <Col xs={4} className="d-flex justify-content-center align-items-center" data-testid="galleryItem">
             <div>
             <h3>{pic.title}</h3>
             {!isClicked ?
