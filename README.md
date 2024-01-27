@@ -9,6 +9,10 @@ elements (Create, Read, Update, Delete) using React's powerful tools in the cont
 
 ## Screen Shot
 
+![first screenshot] (sample_images/screenshot1.png)
+
+![second screenshot] (sample_images/screenshot2.png)
+
 ## Prerequisites
 
 Links to sofware required to install the app:
