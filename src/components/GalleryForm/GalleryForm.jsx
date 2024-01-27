@@ -39,7 +39,7 @@ function GalleryForm({getPics}) {
                             <Form.Label className="my-1">Description of Pic:</Form.Label>
                             <Form.Control type="text" placeholder="Fun Description" value={picDescription} onChange={(e) => setPicDescription(e.target.value)} required/>
                         </Form.Group>
-                        <Button variant="secondary" type="Submit" className="my-2">Submit</Button>
+                        <Button variant="warning" type="Submit" className="my-2">Submit</Button>
                     </Col>
                 </Row>
             </Form>
