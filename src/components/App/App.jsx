@@ -1,4 +1,4 @@
-import Form from "../Form/Form";
+import GalleryForm from "../GalleryForm/GalleryForm";
 import GalleryList from "../GalleryList/GalleryList";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -10,7 +10,7 @@ function App() {
           <h1>React Gallery</h1>
         </header>
         <main>
-        <Form/>
+        <GalleryForm/>
         <GalleryList/>
         </main>
       </div>
