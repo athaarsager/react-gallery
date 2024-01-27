@@ -12,6 +12,9 @@ function GalleryForm({getPics}) {
         axios.post("/api/gallery", {url: picUrl, title: picTitle, description: picDescription})
         .then(() => {
             getPics();
+            setPicUrl("");
+            setPicTitle("");
+            setPicDescription("");
         })
         .catch((error) => {
             console.error("Error in Client POST:", error);
