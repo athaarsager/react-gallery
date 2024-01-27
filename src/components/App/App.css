@@ -8,6 +8,12 @@ header {
     color: gray;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #pic-display
 {
     width: 300px;

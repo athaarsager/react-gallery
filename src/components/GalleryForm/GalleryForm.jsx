@@ -22,10 +22,10 @@ function GalleryForm({getPics}) {
     }
 
     return (
-        <div>
+        <div className="my-3">
             <Form onSubmit={addNewPic}>
                 <Row>
-                    <Col md={{ span: 3, offset: 1}}>
+                    <Col md={{ span: 12, offset: 0}}>
                         <h4>Add a New Picture Here!</h4>
                         <Form.Group controlId="formImageUrl">
                             <Form.Label className="my-1">Pic Url:</Form.Label>
@@ -39,7 +39,9 @@ function GalleryForm({getPics}) {
                             <Form.Label className="my-1">Description of Pic:</Form.Label>
                             <Form.Control type="text" placeholder="Fun Description" value={picDescription} onChange={(e) => setPicDescription(e.target.value)} required/>
                         </Form.Group>
+                        <div className="d-flex justify-content-center">
                         <Button variant="warning" type="Submit" className="my-2">Submit</Button>
+                        </div>
                     </Col>
                 </Row>
             </Form>
