@@ -3,6 +3,11 @@ header {
     margin-bottom: 1rem;
 }
 
+#info-text {
+    text-align: center;
+    color: gray;
+}
+
 #pic-display
 {
     width: 300px;
