@@ -26,11 +26,11 @@ function GalleryList() {
     return (
         <div>
             <Row data-testid="galleryList">
-                {picList.map((pic, index) => (
+                {picList.map((pic) => (
                     <GalleryItem
                         getPics={getPics}
                         pic={pic}
-                        key={index}
+                        key={pic.id}
                     />
                 ))}
             </Row>
