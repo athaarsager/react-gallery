@@ -23,6 +23,7 @@ function App() {
         <header>
           <h1>React Gallery</h1>
         </header>
+        <p id="info-text"><em>Click an image to see its description and vice versa!</em></p>
         <main>
         <GalleryForm
         getPics={getPics}
