@@ -22,7 +22,7 @@ router.post("/", (req, res) => {
   const pic = req.body;
   const queryText = `
   INSERT INTO "gallery" ("url", "title", "description")
-  VALUES ($1, $2, $3)
+  VALUES ($1, $2, $3);
   `; 
   pool.query(queryText, [pic.url, pic.title, pic.description])
   .then(() => {
@@ -30,6 +30,22 @@ router.post("/", (req, res) => {
   })
   .catch((error) => {
     console.error("Error in server POST:", error);
+    res.sendStatus(500);
+  });
+})
+
+//DELETE /gallery/:id
+router.delete("/:id", (req, res) => {
+  const picId = req.params.id;
+  const queryText = `
+  DELETE FROM "gallery" WHERE id=$1;
+  `;
+  pool.query(queryText, [picId])
+  .then(() => {
+    res.sendStatus(204);
+  })
+  .catch((error) => {
+    console.error("Error in server DELETE:", error);
     res.sendStatus(500);
   });
 })
