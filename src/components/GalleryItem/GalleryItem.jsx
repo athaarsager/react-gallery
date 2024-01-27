@@ -18,6 +18,16 @@ function GalleryItem({ getPics, pic}) {
             });
     }
 
+    const deletePic = (picId) => {
+        axios.delete(`/api/gallery/${picId}`)
+        .then(() => {
+            getPics();
+        })
+        .catch((error) => {
+            console.error("Error in client DELETE:", error);
+        });
+    }
+
     return (
         <Col xs={4} className="d-flex justify-content-center align-items-center" data-testid="galleryItem">
             <div id="pic-display" className="d-flex flex-column align-items-center">
@@ -29,7 +39,7 @@ function GalleryItem({ getPics, pic}) {
             }
             <div className="my-2">
             <Button variant="primary" className="mx-1"data-testid="like" onClick={() => updateLikes(pic.id)}>Love it!</Button>
-            <Button variant="secondary" className="mx-1" >Delete it</Button>
+            <Button variant="secondary" className="mx-1" onClick={() => deletePic(pic.id)}>Delete it</Button>
             </div>
             {pic.likes === 1 ?
                 <p>{pic.likes} person loves this!</p>
