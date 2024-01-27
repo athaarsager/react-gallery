@@ -9,8 +9,8 @@ function GalleryForm({getPics}) {
 
     const addNewPic = (e) => {
         axios.post("/api/gallery", {url: picUrl, title: picTitle, description: picDescription})
-        .then((response) => {
-
+        .then(() => {
+            getPics();
         })
         .catch((error) => {
             console.error("Error in Client POST:", error);
@@ -25,15 +25,15 @@ function GalleryForm({getPics}) {
                         <h4>Add a New Picture Here!</h4>
                         <Form.Group controlId="formImageUrl">
                             <Form.Label className="my-1">Pic Url:</Form.Label>
-                            <Form.Control type="url" placeholder="https://i.imgur.com/J5re04j.png" value={picUrl} required/>
+                            <Form.Control type="url" placeholder="https://i.imgur.com/J5re04j.png" value={picUrl} onChange={setPicUrl} required/>
                         </Form.Group>
                         <Form.Group controlId="picTitle">
                             <Form.Label className="my-1">Title of Pic:</Form.Label>
-                            <Form.Control type="text" placeholder="Awesome Title" value={picTitle} required/>
+                            <Form.Control type="text" placeholder="Awesome Title" value={picTitle} onChange={setPicTitle} required/>
                         </Form.Group>
                         <Form.Group controlId="picDescription">
                             <Form.Label className="my-1">Description of Pic:</Form.Label>
-                            <Form.Control type="text" placeholder="Fun Description" value={picDescription} required/>
+                            <Form.Control type="text" placeholder="Fun Description" value={picDescription} onChange={setPicDescription} required/>
                         </Form.Group>
                         <Button variant="secondary" type="Submit" className="my-2">Submit</Button>
                     </Col>
