@@ -8,8 +8,6 @@ function App() {
         <header>
           <h1>React Gallery</h1>
         </header>
-
-        <p>The gallery goes here!</p>
         <GalleryList/>
       </div>
     );
