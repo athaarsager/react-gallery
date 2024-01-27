@@ -4,19 +4,9 @@ import { useState, useEffect } from "react";
 import GalleryItem from "../GalleryItem/GalleryItem";
 import {Row} from "react-bootstrap";
 
-function GalleryList() {
+function GalleryList({getPics, picList}) {
 
-    const [picList, setPicList] = useState([]);
     //may need useEffect
-    const getPics = () => {
-        axios.get("/api/gallery")
-            .then((response) => {
-                setPicList(response.data);
-            })
-            .catch((error) => {
-                console.error("Error in client GET:", error);
-            });
-    }
 
     useEffect(() => {
         getPics();

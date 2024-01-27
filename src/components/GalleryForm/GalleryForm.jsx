@@ -1,13 +1,20 @@
 import { useState } from "react";
 import axios from "axios";
 import { Form, Button, Row, Col } from "react-bootstrap";
-function GalleryForm() {
+function GalleryForm({getPics}) {
 
     const [picUrl, setPicUrl] = useState("");
     const [picTitle, setPicTitle] = useState("");
     const [picDescription, setPicDescription] = useState("");
 
     const addNewPic = (e) => {
+        axios.post("/api/gallery", {url: picUrl, title: picTitle, description: picDescription})
+        .then((response) => {
+
+        })
+        .catch((error) => {
+            console.error("Error in Client POST:", error);
+        })
     }
 
     return (
