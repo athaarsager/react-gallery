@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import { useState, useEffect } from "react";
 import GalleryItem from "../GalleryItem/GalleryItem";
+import {Row} from "react-bootstrap";
 
 function GalleryList() {
 
@@ -23,8 +24,8 @@ function GalleryList() {
     }, []);
 
     return (
-        <>
-            <ul data-testid="galleryList">
+        <div>
+            <Row data-testid="galleryList">
                 {picList.map((pic, index) => (
                     <GalleryItem
                         getPics={getPics}
@@ -32,8 +33,8 @@ function GalleryList() {
                         key={index}
                     />
                 ))}
-            </ul>
-        </>
+            </Row>
+        </div>
     );
 }
 

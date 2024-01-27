@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import {Col, Row} from "react-bootstrap";
 
 function GalleryItem({ getPics, pic, key }) {
 
@@ -18,12 +19,13 @@ function GalleryItem({ getPics, pic, key }) {
     }
 
     return (
-        <div data-testid="galleryItem">
+        <Col xs={4} className="d-flex justify-content-center" data-testid="galleryItem">
+            <div>
             <h3>{pic.title}</h3>
             {!isClicked ?
-                <li key={key} data-testid="toggle" onClick={toggleDisplay}><img src={pic.url} /></li>
+                <div key={key} data-testid="toggle" onClick={toggleDisplay}><img src={pic.url} /></div>
                 :
-                <li key={key} data-testid="toggle" onClick={toggleDisplay}><p data-testid="description"> {pic.description}</p></li>
+                <div key={key} data-testid="toggle" onClick={toggleDisplay}><p data-testid="description"> {pic.description}</p></div>
             }
             <button data-testid="like" onClick={() => updateLikes(pic.id)}>Love it!</button>
             {pic.likes === 1 ?
@@ -31,8 +33,9 @@ function GalleryItem({ getPics, pic, key }) {
                 :
                 <p>{pic.likes} people love this!</p>
             }
+            </div>
 
-        </div>
+        </Col>
     );
 }
 
