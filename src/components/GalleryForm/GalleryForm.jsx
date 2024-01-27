@@ -4,6 +4,8 @@ import { Form, Button, Row, Col } from "react-bootstrap";
 function GalleryForm() {
 
     const [picUrl, setPicUrl] = useState("");
+    const [picTitle, setPicTitle] = useState("");
+    const [picDescription, setPicDescription] = useState("");
     const addNewPic = (e) => {
     }
 
@@ -19,11 +21,11 @@ function GalleryForm() {
                         </Form.Group>
                         <Form.Group controlId="picTitle">
                             <Form.Label className="my-1">Title of Pic:</Form.Label>
-                            <Form.Control type="text" placeholder="Awesome Title"/>
+                            <Form.Control type="text" placeholder="Awesome Title" value={picTitle}/>
                         </Form.Group>
                         <Form.Group controlId="picDescription">
                             <Form.Label className="my-1">Description of Pic:</Form.Label>
-                            <Form.Control type="text" placeholder="Fun Description"/>
+                            <Form.Control type="text" placeholder="Fun Description" value={picDescription}/>
                         </Form.Group>
                         <Button variant="secondary" type="Submit" className="my-2">Submit</Button>
                     </Col>
