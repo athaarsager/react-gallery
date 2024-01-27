@@ -12,7 +12,6 @@ function GalleryList() {
         axios.get("/api/gallery")
             .then((response) => {
                 setPicList(response.data);
-                console.log(picList);
             })
             .catch((error) => {
                 console.error("Error in client GET:", error);
