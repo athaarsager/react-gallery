@@ -7,7 +7,7 @@ _Duration: 1 Weekend_
 _React Gallery_ is a CRUD app made with the React js library. The purpose of this project is to execute all four CRUD
 elements (Create, Read, Update, Delete) using React's powerful tools in the context of a virtual photo gallery.
 
-## Screen Shot
+## Screen Shots
 
 ![first screenshot] (sample_images/screenshot1.png)
 
@@ -31,18 +31,18 @@ Links to sofware required to install the app:
 
 ## Usage
 
--The web page displays a gallery of personal images. When an image is clicked, its display changes from the photo itself
+- The web page displays a gallery of personal images. When an image is clicked, its display changes from the photo itself
 to a description of the photo. If the description is clicked, it switches back to displaying the photo. 
--Below each photo is a "love it!" button where users can "upvote" their favorite images. This will update the upvotes in the database and
+- Below each photo is a "love it!" button where users can "upvote" their favorite images. This will update the upvotes in the database and
 display them on the page below this button. 
--If users dislike a photo, they can press the "Delete it" button right next to the "love it" button and the photo will be removed from the gallery. (Note: this deletes the photo in the database as well as on the front end.)
--At the top of the page is a form that users can use to add new photos to the page and database. Users are required to input a picture url, title, and description before submitting to the gallery. This creates a new photo in the backend database and displays it on the front-end webpage.
+- If users dislike a photo, they can press the "Delete it" button right next to the "love it" button and the photo will be removed from the gallery. (Note: this deletes the photo in the database as well as on the front end.)
+- At the top of the page is a form that users can use to add new photos to the page and database. Users are required to input a picture url, title, and description before submitting to the gallery. This creates a new photo in the backend database and displays it on the front-end webpage.
 
 
 ## Built With
 
--React
--React Bootstrap
+- React
+- React Bootstrap
 
 ## Acknowledgement
 
