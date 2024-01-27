@@ -27,7 +27,10 @@ function GalleryItem({ getPics, pic}) {
                 :
                 <div className="pic-container d-flex align-items-center" data-testid="toggle" onClick={toggleDisplay}><p data-testid="description"> {pic.description}</p></div>
             }
-            <Button variant="primary" className="my-2" data-testid="like" onClick={() => updateLikes(pic.id)}>Love it!</Button>
+            <div className="my-2">
+            <Button variant="primary" className="mx-1"data-testid="like" onClick={() => updateLikes(pic.id)}>Love it!</Button>
+            <Button variant="secondary" className="mx-1" >Delete it</Button>
+            </div>
             {pic.likes === 1 ?
                 <p>{pic.likes} person loves this!</p>
                 :
