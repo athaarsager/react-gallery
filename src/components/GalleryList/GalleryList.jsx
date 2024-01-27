@@ -24,7 +24,7 @@ function GalleryList() {
 
     return (
         <>
-            <ul>
+            <ul data-testid="galleryList">
                 {picList.map((pic, index) => (
                     <GalleryItem
                         getPics={getPics}

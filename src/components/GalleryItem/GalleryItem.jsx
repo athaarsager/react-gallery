@@ -18,12 +18,12 @@ function GalleryItem({ getPics, pic, key }) {
     }
 
     return (
-        <>
-            <h3 data-testid="description">{pic.title}</h3>
+        <div data-testid="galleryItem">
+            <h3>{pic.title}</h3>
             {!isClicked ?
-                <li key={key} data-testid="galleryItem"><img data-testid="toggle" src={pic.url} onClick={toggleDisplay}/></li>
+                <li key={key} data-testid="toggle" onClick={toggleDisplay}><img src={pic.url} /></li>
                 :
-                <li key={key} data-testid="galleryItem"><p data-testid="toggle" onClick={toggleDisplay}> {pic.description}</p></li>
+                <li key={key} data-testid="toggle" onClick={toggleDisplay}><p data-testid="description"> {pic.description}</p></li>
             }
             <button data-testid="like" onClick={() => updateLikes(pic.id)}>Love it!</button>
             {pic.likes === 1 ?
@@ -32,7 +32,7 @@ function GalleryItem({ getPics, pic, key }) {
                 <p>{pic.likes} people love this!</p>
             }
 
-        </>
+        </div>
     );
 }
 
