@@ -9,9 +9,9 @@ elements (Create, Read, Update, Delete) using React's powerful tools in the cont
 
 ## Screen Shots
 
-![first screenshot] (sample_images/screenshot1.png)
+![first screenshot] (./sample_images/screenshot1.png)
 
-![second screenshot] (sample_images/screenshot2.png)
+![second screenshot] (./sample_images/screenshot2.png)
 
 ## Prerequisites
 
