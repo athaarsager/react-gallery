@@ -1,5 +1,6 @@
 import GalleryForm from "../GalleryForm/GalleryForm";
 import GalleryList from "../GalleryList/GalleryList";
+import About from "../About/About";
 import { useState } from "react";
 import axios from "axios";
 import "./App.css";
@@ -26,21 +27,28 @@ function App() {
           <h1>React Gallery</h1>
           <nav>
             <ul>
-              <li><NavLink>Gallery</NavLink></li>
-              <li><NavLink>Form</NavLink></li>
-              <li><NavLink>About</NavLink></li>
+              <li><NavLink to="/">Gallery</NavLink></li>
+              <li><NavLink to="/form">Form</NavLink></li>
+              <li><NavLink to="/about">About</NavLink></li>
             </ul>
           </nav>
         </header>
         <p id="info-text"><em>Click an image to see its description and vice versa!</em></p>
         <main>
-          <GalleryForm
-            getPics={getPics}
-          />
-          <GalleryList
-            getPics={getPics}
-            picList={picList}
-          />
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/form">
+            <GalleryForm
+              getPics={getPics}
+            />
+          </Route>
+          <Route path="/" exact>
+            <GalleryList
+              getPics={getPics}
+              picList={picList}
+            />
+          </Route>
         </main>
       </div>
     </Router>
