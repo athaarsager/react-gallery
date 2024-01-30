@@ -26,10 +26,10 @@ function App() {
         <header>
           <h1>React Gallery</h1>
           <nav>
-            <ul>
-              <li><NavLink to="/">Gallery</NavLink></li>
-              <li><NavLink to="/form">Form</NavLink></li>
-              <li><NavLink to="/about">About</NavLink></li>
+            <ul id="navbar">
+              <li className="nav-link"><NavLink to="/">Gallery</NavLink></li>
+              <li className="nav-link"><NavLink to="/form">Form</NavLink></li>
+              <li className="nav-link"><NavLink to="/about">About</NavLink></li>
             </ul>
           </nav>
         </header>

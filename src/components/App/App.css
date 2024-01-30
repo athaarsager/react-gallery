@@ -14,6 +14,11 @@ main {
     align-items: center;
 }
 
+#navbar {
+    list-style: none;
+}
+
+
 #pic-display
 {
     width: 300px;
