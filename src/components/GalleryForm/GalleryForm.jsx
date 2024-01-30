@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {useHistory} from "react-router-dom";
 import axios from "axios";
 import { Form, Button, Row, Col } from "react-bootstrap";
 function GalleryForm({getPics}) {
@@ -6,6 +7,7 @@ function GalleryForm({getPics}) {
     const [picUrl, setPicUrl] = useState("");
     const [picTitle, setPicTitle] = useState("");
     const [picDescription, setPicDescription] = useState("");
+    const history = useHistory();
 
     const addNewPic = (e) => {
         e.preventDefault();
@@ -15,11 +17,13 @@ function GalleryForm({getPics}) {
             setPicUrl("");
             setPicTitle("");
             setPicDescription("");
+            history.push("/");
         })
         .catch((error) => {
             console.error("Error in Client POST:", error);
         })
     }
+
 
     return (
         <div className="my-3">
