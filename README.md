@@ -29,6 +29,10 @@ Links to sofware required to install the app:
 5. Run `npm run client` in your terminal
 6. Click the link provided by `npm run client` to open up a browser tab with the running web page on it
 
+## Live Project
+
+You can view a live version of this project by visiting: https://athaarsager-react-gallery.fly.dev
+
 ## Usage
 
 - The web page displays a gallery of personal images. When an image is clicked, its display changes from the photo itself
